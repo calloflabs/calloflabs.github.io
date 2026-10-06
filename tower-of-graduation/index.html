@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>졸업의 탑 (Tower of Graduation)</title>
+<title>졸업의 탑 · Tower of Graduation</title>
 <meta name="description" content="연구실에서 살아남기 외전. 리뷰어 떼와 교수님보다 빨리 탑을 오르는 러너.">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;800&display=swap">
@@ -101,17 +101,17 @@ h1{font-family:var(--display);font-size:clamp(44px,13vw,64px);margin:0;line-heig
 
 <div class="hud" id="hud" hidden>
   <div>
-    <div class="floor"><span id="floorN">1</span><small>층</small></div>
+    <div class="floor"><span id="floorN">1</span><small data-en="F">층</small></div>
     <div class="sub" id="subLine">졸업까지 99층</div>
     <div class="hearts" id="hearts"><span>♥</span><span>♥</span><span>♥</span></div>
   </div>
   <div class="right">
     <div class="chip data"><span class="ico"></span><span id="dataN">0</span></div>
-    <div class="chip paper"><span class="ico"></span><span id="paperN">0/3</span> 논문</div>
+    <div class="chip paper"><span class="ico"></span><span id="paperN">0/3</span> <span data-en="papers">논문</span></div>
     <div class="chip speed" id="speedN">속도 12</div>
   </div>
 </div>
-<button id="pauseBtn" aria-label="일시정지">II</button>
+<button id="pauseBtn" aria-label="Pause">II</button>
 <div class="bubble" id="bubble"></div>
 <div class="toast" id="toast"></div>
 <div class="turnHint" id="turnHint"></div>
@@ -120,88 +120,88 @@ h1{font-family:var(--display);font-size:clamp(44px,13vw,64px);margin:0;line-heig
 
 <div class="modal" id="title">
   <div class="card">
-    <div class="kicker">연구실에서 살아남기 외전</div>
-    <h1>졸업의 탑</h1>
-    <div class="tag">탑 꼭대기에 졸업장이 있다.<br>리뷰어 떼와 교수님보다 빨리 올라가라.</div>
+    <div class="kicker" data-en="A Lab Survival spin-off">연구실에서 살아남기 외전</div>
+    <h1 data-en="Tower of Graduation">졸업의 탑</h1>
+    <div class="tag" data-en-html="The diploma is at the top of the tower.<br>Climb faster than the reviewers and your professor.">탑 꼭대기에 졸업장이 있다.<br>리뷰어 떼와 교수님보다 빨리 올라가라.</div>
     <div class="howto">
-      <div><b>⇆</b>좌우로 드래그<br>옆으로 이동 (데이터 줍기)</div>
-      <div><b>↰ ↱</b>모퉁이에서 화살표 쪽으로<br>빠르게 튕기면 회전</div>
-      <div><b>⇡</b>위로 스와이프 또는 탭<br>점프</div>
-      <div><b>⇣</b>아래로 스와이프<br>슬라이드</div>
+      <div data-en-html="<b>⇆</b>Drag left/right<br>move sideways (collect data)"><b>⇆</b>좌우로 드래그<br>옆으로 이동 (데이터 줍기)</div>
+      <div data-en-html="<b>↰ ↱</b>At a corner flick fast<br>toward the arrow to turn"><b>↰ ↱</b>모퉁이에서 화살표 쪽으로<br>빠르게 튕기면 회전</div>
+      <div data-en-html="<b>⇡</b>Swipe up or tap<br>jump"><b>⇡</b>위로 스와이프 또는 탭<br>점프</div>
+      <div data-en-html="<b>⇣</b>Swipe down<br>slide"><b>⇣</b>아래로 스와이프<br>슬라이드</div>
     </div>
-    <div class="req">졸업 요건 · <span>100층</span> 도달 · 점수 = 데이터 + 논문×100</div>
-    <div class="req">앞에서 달려오는 <em>교수님·리뷰어</em>는 옆으로 피하고 <em>거대 망치</em>는 타이밍을 보고 지나간다<br>책더미·현수막 같은 작은 장애물은 데이터를 잃고 교수님·망치·거대 논문은 <em>체력 1칸</em>을 잃는다<br>체력은 3칸 · <span>커피</span>를 마시면 1칸 회복 · 끊긴 길에 떨어지면 즉시 탈락</div>
-    <div class="row"><button class="btn" id="startBtn">시작하기</button><button class="btn ghost" id="tutBtn">튜토리얼</button><button class="btn ghost" id="rankBtn">랭킹</button></div>
+    <div class="req" data-en-html="Graduation requirement · reach <span>floor 100</span> · score = data + papers×100">졸업 요건 · <span>100층</span> 도달 · 점수 = 데이터 + 논문×100</div>
+    <div class="req" data-en-html="Sidestep the <em>professor and reviewers</em> charging at you and time your way past the <em>giant hammer</em><br>Small obstacles like book piles and banners cost data · the professor, hammer and giant paper cost <em>1 HP</em><br>3 HP total · <span>coffee</span> restores 1 · fall through a gap and you are out">앞에서 달려오는 <em>교수님·리뷰어</em>는 옆으로 피하고 <em>거대 망치</em>는 타이밍을 보고 지나간다<br>책더미·현수막 같은 작은 장애물은 데이터를 잃고 교수님·망치·거대 논문은 <em>체력 1칸</em>을 잃는다<br>체력은 3칸 · <span>커피</span>를 마시면 1칸 회복 · 끊긴 길에 떨어지면 즉시 탈락</div>
+    <div class="row"><button class="btn" id="startBtn" data-en="Start">시작하기</button><button class="btn ghost" id="tutBtn" data-en="Tutorial">튜토리얼</button><button class="btn ghost" id="rankBtn" data-en="Ranking">랭킹</button><button class="btn ghost" id="langBtn" data-en="한국어">English</button></div>
     <div class="best" id="bestLine"></div>
   </div>
 </div>
 
 <div class="modal" id="pause" hidden>
   <div class="card">
-    <h1 style="font-size:40px">잠시 쉬는 중</h1>
-    <div class="tag">교수님도 커피 마시러 가셨다</div>
+    <h1 style="font-size:40px" data-en="Taking a breather">잠시 쉬는 중</h1>
+    <div class="tag" data-en="Even the professor went for coffee">교수님도 커피 마시러 가셨다</div>
     <div class="row">
-      <button class="btn" id="resumeBtn">계속 오르기</button>
-      <button class="btn ghost" id="soundBtn">소리 켜짐</button>
-      <button class="btn ghost" id="quitBtn">처음으로</button>
+      <button class="btn" id="resumeBtn" data-en="Keep climbing">계속 오르기</button>
+      <button class="btn ghost" id="soundBtn" data-en="Sound on">소리 켜짐</button>
+      <button class="btn ghost" id="quitBtn" data-en="Title">처음으로</button>
     </div>
   </div>
 </div>
 
 <div class="modal" id="over" hidden>
   <div class="card">
-    <div class="kicker">탈락</div>
-    <h1 style="font-size:46px">졸업 실패</h1>
+    <div class="kicker" data-en="Dropped out">탈락</div>
+    <h1 style="font-size:46px" data-en="Failed to graduate">졸업 실패</h1>
     <div class="reason" id="reason">교수님께 붙잡혔다</div>
     <div class="stats">
-      <div><b id="oFloor">0</b><small>층</small></div>
-      <div><b id="oData" style="color:var(--data)">0</b><small>데이터</small></div>
-      <div><b id="oPaper" style="color:var(--paper)">0</b><small>논문</small></div>
+      <div><b id="oFloor">0</b><small data-en="floor">층</small></div>
+      <div><b id="oData" style="color:var(--data)">0</b><small data-en="data">데이터</small></div>
+      <div><b id="oPaper" style="color:var(--paper)">0</b><small data-en="papers">논문</small></div>
     </div>
-    <div class="score"><small>점수</small><b id="oScore">0</b></div>
+    <div class="score"><small data-en="score">점수</small><b id="oScore">0</b></div>
     <div class="best" id="oBest"></div>
-    <div class="rankEntry" id="rankEntry"><input id="rankName" maxlength="10" placeholder="이름 (랭킹 등록)" autocomplete="off"><button class="btn ghost" id="rankSubmit">등록</button></div>
+    <div class="rankEntry" id="rankEntry"><input id="rankName" maxlength="10" placeholder="이름 (랭킹 등록)" data-en-placeholder="Name (for ranking)" autocomplete="off"><button class="btn ghost" id="rankSubmit" data-en="Submit">등록</button></div>
     <ol class="rankList" id="oRank"></ol>
     <div class="row">
-      <button class="btn" id="retryBtn">재입학</button>
-      <button class="btn ghost" id="homeBtn">처음으로</button>
+      <button class="btn" id="retryBtn" data-en="Re-enroll">재입학</button>
+      <button class="btn ghost" id="homeBtn" data-en="Title">처음으로</button>
     </div>
   </div>
 </div>
 
 <div class="modal" id="rank" hidden>
   <div class="card">
-    <div class="kicker">명예의 전당</div>
-    <h1 style="font-size:40px">랭킹</h1>
-    <div class="tag">점수 = 데이터 + 논문×100</div>
+    <div class="kicker" data-en="Hall of fame">명예의 전당</div>
+    <h1 style="font-size:40px" data-en="Ranking">랭킹</h1>
+    <div class="tag" data-en="Score = data + papers×100">점수 = 데이터 + 논문×100</div>
     <ol class="rankList" id="rankList"></ol>
-    <button class="btn ghost" id="rankClose">닫기</button>
+    <button class="btn ghost" id="rankClose" data-en="Close">닫기</button>
   </div>
 </div>
 
 <div class="modal" id="tutDone" hidden>
   <div class="card">
-    <div class="kicker">오리엔테이션 수료</div>
-    <h1 style="font-size:44px">준비 완료</h1>
-    <div class="tag">드래그 · 점프 · 슬라이드 · 회전까지 다 해봤다.<br>이제 진짜 졸업의 탑이다.</div>
+    <div class="kicker" data-en="Orientation complete">오리엔테이션 수료</div>
+    <h1 style="font-size:44px" data-en="Ready">준비 완료</h1>
+    <div class="tag" data-en-html="Drag · jump · slide · turn — you have done it all.<br>Now the real tower.">드래그 · 점프 · 슬라이드 · 회전까지 다 해봤다.<br>이제 진짜 졸업의 탑이다.</div>
     <div class="row">
-      <button class="btn" id="tutStartBtn">시작하기</button>
-      <button class="btn ghost" id="tutHomeBtn">처음으로</button>
+      <button class="btn" id="tutStartBtn" data-en="Start">시작하기</button>
+      <button class="btn ghost" id="tutHomeBtn" data-en="Title">처음으로</button>
     </div>
   </div>
 </div>
 
 <div class="modal" id="grad" hidden>
   <div class="card">
-    <div class="kicker">학위 수여</div>
-    <h1>졸업!</h1>
-    <div class="tag">100층. 드디어 박사가 되었다.<br>그런데 탑은 아직 끝나지 않았다…</div>
+    <div class="kicker" data-en="Degree conferred">학위 수여</div>
+    <h1 data-en="Graduated!">졸업!</h1>
+    <div class="tag" data-en-html="Floor 100. You are finally a doctor.<br>But the tower does not end here…">100층. 드디어 박사가 되었다.<br>그런데 탑은 아직 끝나지 않았다…</div>
     <div class="stats">
-      <div><b id="gFloor">100</b><small>층</small></div>
-      <div><b id="gData" style="color:var(--data)">0</b><small>데이터</small></div>
-      <div><b id="gTime">0</b><small>초</small></div>
+      <div><b id="gFloor">100</b><small data-en="floor">층</small></div>
+      <div><b id="gData" style="color:var(--data)">0</b><small data-en="data">데이터</small></div>
+      <div><b id="gTime">0</b><small data-en="sec">초</small></div>
     </div>
-    <button class="btn" id="postdocBtn">포닥으로 계속 오르기</button>
+    <button class="btn" id="postdocBtn" data-en="Keep climbing as a postdoc">포닥으로 계속 오르기</button>
   </div>
 </div>
 <div class="credit" id="credit">calloflabs</div>
@@ -210,13 +210,20 @@ h1{font-family:var(--display);font-size:clamp(44px,13vw,64px);margin:0;line-heig
 <script>
 (function(){
 'use strict';
+// ───────────── language (ko default · ?lang=en · title button) ─────────────
+const LANG=(()=>{ let l=''; try{ l=localStorage.getItem('tog_lang')||''; }catch(e){} const q=new URLSearchParams(location.search).get('lang'); if(q==='en'||q==='ko'){ l=q; try{ localStorage.setItem('tog_lang',q); }catch(e){} } if(l!=='en'&&l!=='ko') l=/^ko/i.test(navigator.language||'')?'ko':'en'; return l; })();
+const TX={"논문 어디까지 썼어?!": "How's that paper coming?!", "주말에 뭐 해?": "Any plans this weekend?", "데이터 다시 찍어와!": "Re-take the data!", "랩미팅 내일로 당기자": "Let's move lab meeting to tomorrow", "그 결과 재현 돼?": "Does that result reproduce?", "리비전 언제 보내?": "When is the revision going out?", "학회 등록 했어?": "Did you register for the conference?", "피규어 1 다시 그려": "Redraw Figure 1", "Reviewer 2: 이 결과 못 믿겠는데요": "Reviewer 2: I don't buy this result", "리젝!! 리젝!!": "REJECT!! REJECT!!", "재실험 요구합니다": "Additional experiments required", "novelty가 없습니다": "Lacks novelty", "레퍼런스에 내 논문 추가하세요": "Please cite my papers", "영어 교정 받으세요": "Needs English editing", "아야!": "Ouch!", "으악": "Argh", "휘청": "Whoa", "논문 안 쓰고 어디 가!!": "Where are you going without writing!!", "오늘 랩미팅 17:00": "LAB MEETING TODAY 17:00", "▼ 슬라이드 ▼": "▼ SLIDE ▼", "최고 기록 ": "Best ", "층": "F", "← 왼쪽으로 드래그해서 데이터를 주워": "← Drag left to collect the data", "오른쪽으로 드래그! 데이터는 떠 있는 곳으로 옮겨가며 줍는다": "Drag right! Move to wherever the data floats", "책더미 → 탭하거나 위로 스와이프해서 점프": "Book pile → tap or swipe up to jump", "현수막 → 아래로 스와이프해서 슬라이드": "Banner → swipe down to slide", "모퉁이! 화살표 방향으로 빠르게 튕겨서 회전": "Corner! Flick fast toward the arrow to turn", "교수님이 달려온다! 옆으로 비켜": "The professor is charging! Step aside", "리뷰어 2인조 → 빈 차선으로": "Two reviewers → take the open lane", "거대 망치 → 망치가 지나간 쪽으로 타이밍 맞춰 통과": "Giant hammer → time it and pass where it just swung", "거대 논문 → 슬라이드로 밑을 지나가": "Giant paper → slide underneath", "끊긴 길 → 점프": "Gap → jump", "커피 → 체력 1칸 회복 (체력은 3칸)": "Coffee → +1 HP (3 HP max)", "논문 게재! 잠깐 무적 · 교수님을 들이받으면 우주로 날아간다 · 논문 1편 = 100점": "Paper accepted! Brief invincibility · ram the professor and he flies into space · 1 paper = 100 pts", "끝! 이제 진짜 탑으로": "Done! On to the real tower", "속도 ": "Speed ", "포닥 ": "Postdoc yr ", "년차 · 점수 ": " · score ", "졸업까지 ": "To graduation ", "층 · 점수 ": "F · score ", "괜찮아 다시!": "No worries try again!", "데이터 ": "Lost ", "개 유실!": " data!", " · 체력 -1": " · HP -1", "커피 수혈! 체력 +1": "Coffee! HP +1", "커피 과다 · 데이터 +10": "Too much coffee · data +10", "신기록! 최고 ": "New record! Best ", "아직 기록이 없다": "No records yet", "층 · 데이터 ": "F · data ", " · 논문 ": " · papers ", "랭킹 불러오는 중…": "Loading ranking…", "익명": "anon", "등록 중…": "Sending…", "등록": "Submit", "랭킹 서버 연결 실패": "Ranking server unreachable", "논문 게재! +100": "Paper accepted! +100", "날아갔다!": "Launched!", "홈런!": "Home run!", "리젝 반사!": "Reject reflected!", "굿바이!": "Goodbye!", "교수님 발사!!": "Professor launched!!", "으아아아아아악!!!": "AAAAAAARGH!!!", "✦ 띠링": "✦ ting", "화살표 쪽으로 튕겨야 해!": "Flick toward the arrow!", "교수님": "Professor", "장애물": "Obstacle", "거대 논문": "Giant paper", "현수막": "Banner", "거대 망치": "Giant hammer", "리젝 두루마리": "Reject scroll", "리뷰어": "Reviewer", "기둥": "Pillar", "책장": "Bookshelf", "소리 켜짐": "Sound on", "소리 꺼짐": "Sound off", "포닥 모드": "Postdoc mode", "벽에 부딪힘": "Hit the wall", "탑에서 떨어졌다": "Fell off the tower", "교수님께 잡혔다": "Caught by the professor", "거대 논문에 깔림": "Crushed by a giant paper", "거대 망치에 맞음": "Hit by the giant hammer", "리젝 두루마리에 깔림": "Flattened by a reject scroll", "리뷰어에게 잡혔다": "Caught by a reviewer"};
+function T(k){ return LANG==='en' ? (TX[k]!==undefined?TX[k]:k) : k; }
+if(LANG==='en'){ document.documentElement.lang='en'; document.querySelectorAll('[data-en]').forEach(el=>{ el.textContent=el.dataset.en; }); document.querySelectorAll('[data-en-html]').forEach(el=>{ el.innerHTML=el.dataset.enHtml; }); document.querySelectorAll('[data-en-placeholder]').forEach(el=>{ el.placeholder=el.dataset.enPlaceholder; }); }
+document.getElementById('langBtn').onclick=()=>{ const n=LANG==='en'?'ko':'en'; try{ localStorage.setItem('tog_lang',n); }catch(e){} const u=new URL(location.href); u.searchParams.set('lang',n); location.href=u.toString(); };
+
 // ───────────── constants ─────────────
 const LANE_W=2.3, K=0.08, SEG=2, FLOOR_H=3, GRAD_FLOOR=100, GRAD_PAPERS=3, ROAD_W=7.6;
 const JUMP_V=12, GRAV=30, SLIDE_T=0.75;
 const PLAYER_H=2.3, LOW_H=1.1, BANNER_BOTTOM=1.55, TURN_WIN=22, SPD0=18, SPDMAX=32, XMAX=1.25;
-const PROF_LINES=['논문 어디까지 썼어?!','주말에 뭐 해?','데이터 다시 찍어와!','랩미팅 내일로 당기자','그 결과 재현 돼?','리비전 언제 보내?','학회 등록 했어?','피규어 1 다시 그려'];
-const REV_LINES=['Reviewer 2: 이 결과 못 믿겠는데요','리젝!! 리젝!!','재실험 요구합니다','novelty가 없습니다','레퍼런스에 내 논문 추가하세요','영어 교정 받으세요'];
-const STUMBLE_LINES=['아야!','으악','휘청'];
+const PROF_LINES=[T('논문 어디까지 썼어?!'),T('주말에 뭐 해?'),T('데이터 다시 찍어와!'),T('랩미팅 내일로 당기자'),T('그 결과 재현 돼?'),T('리비전 언제 보내?'),T('학회 등록 했어?'),T('피규어 1 다시 그려')];
+const REV_LINES=[T('Reviewer 2: 이 결과 못 믿겠는데요'),T('리젝!! 리젝!!'),T('재실험 요구합니다'),T('novelty가 없습니다'),T('레퍼런스에 내 논문 추가하세요'),T('영어 교정 받으세요')];
+const STUMBLE_LINES=[T('아야!'),T('으악'),T('휘청')];
 
 // ───────────── renderer / scene ─────────────
 const canvas=document.getElementById('c');
@@ -360,7 +367,7 @@ const HORDE_OFF=[[0,0],[-1.5,-0.95],[-1.0,0.95]];
 function updateHorde(){ for(let i=0;i<3;i++){ const o=HORDE_OFF[i]; const ln=Math.max(-1.3,Math.min(1.3,G.lane*0.6+o[1])); place(horde[i],G.s-G.chaseDist+o[0],ln,G.introY||0); } }
 function updateIntro(){ // 2.2s: the gang lunges from behind · player bolts
   const t=2.2-G.intro; for(const h of horde) h.visible=true;
-  if(t<0.15 && !G.introSaid){ G.introSaid=true; showBubble('논문 안 쓰고 어디 가!!',horde[0],1.6); sfx('prof'); }
+  if(t<0.15 && !G.introSaid){ G.introSaid=true; showBubble(T('논문 안 쓰고 어디 가!!'),horde[0],1.6); sfx('prof'); }
   const dist = t<0.9 ? 16-13*(t/0.9) : t<1.3 ? 3 : 3+ (t-1.3)*9;
   G.chaseDist=dist; G.introY = (t>0.75&&t<1.25) ? Math.sin((t-0.75)/0.5*Math.PI)*1.6 : 0;
   updateHorde();
@@ -369,7 +376,7 @@ function updateIntro(){ // 2.2s: the gang lunges from behind · player bolts
 }
 
 // ───────────── obstacle builders ─────────────
-const bannerMat=new THREE.MeshLambertMaterial({map:texture(768,160,(g,w,h)=>{g.fillStyle='#b8302a';g.fillRect(0,0,w,h);g.fillStyle='#ffe9a8';g.font='bold 92px '+DISP;g.textAlign='center';g.textBaseline='middle';g.fillText('오늘 랩미팅 17:00',w/2,h/2+4);})});
+const bannerMat=new THREE.MeshLambertMaterial({map:texture(768,160,(g,w,h)=>{g.fillStyle='#b8302a';g.fillRect(0,0,w,h);g.fillStyle='#ffe9a8';g.font='bold 92px '+DISP;g.textAlign='center';g.textBaseline='middle';g.fillText(T('오늘 랩미팅 17:00'),w/2,h/2+4);})});
 const giantPaperMat=new THREE.MeshLambertMaterial({map:texture(512,512,(g,w,h)=>{g.fillStyle='#fffdf3';g.fillRect(0,0,w,h);g.fillStyle='#777';for(let i=0;i<14;i++){g.fillRect(50,70+i*30,w-100-(i%3)*40,8);}g.save();g.translate(w/2,h/2);g.rotate(-0.3);g.strokeStyle='#c0392b';g.lineWidth=14;g.strokeRect(-200,-70,400,140);g.fillStyle='#c0392b';g.font='bold 64px Impact,"Arial Black",sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('MAJOR REVISION',0,4);g.restore();})});
 const paperMat=new THREE.MeshLambertMaterial({map:texture(256,320,(g,w,h)=>{g.fillStyle='#fffdf5';g.fillRect(0,0,w,h);g.fillStyle='#999';for(let i=0;i<9;i++){g.fillRect(28,60+i*26,w-56-(i%3)*30,6);}g.save();g.translate(w/2,h/2);g.rotate(-0.35);g.strokeStyle='#2e9a3f';g.lineWidth=10;g.strokeRect(-105,-40,210,80);g.fillStyle='#2e9a3f';g.font='bold 44px Impact,"Arial Black",sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('ACCEPTED',0,2);g.restore();}),emissive:0x333322});
 const rollMat=new THREE.MeshLambertMaterial({map:texture(256,256,(g,w,h)=>{g.fillStyle='#f3ecd8';g.fillRect(0,0,w,h);g.fillStyle='#8a8070';for(let i=0;i<10;i++){g.fillRect(0,i*26+8,w,5);}g.fillStyle='#c0392b';g.font='bold 60px Impact,"Arial Black",sans-serif';g.textAlign='center';g.fillText('REJECT',w/2,150);})});
@@ -382,7 +389,7 @@ function makeLow(kind){
   return g;
 }
 function makeBanner(){ const g=new THREE.Group(); const cloth=new THREE.Mesh(box(7.2,1.5,0.08),bannerMat); cloth.position.set(0,BANNER_BOTTOM+0.75,0); g.add(cloth); g.add(B(0.2,3.3,0.2,0x5a4634,-3.7,1.65,0)); g.add(B(0.2,3.3,0.2,0x5a4634,3.7,1.65,0)); g.add(slideDecal()); return g; }
-const slideDecalMat=new THREE.MeshLambertMaterial({map:texture(256,256,(g,w,h)=>{g.clearRect(0,0,w,h);g.fillStyle='rgba(73,240,255,0.55)';g.fillRect(0,0,w,h);g.fillStyle='#07303a';g.font='bold 54px '+DISP;g.textAlign='center';g.textBaseline='middle';g.fillText('▼ 슬라이드 ▼',w/2,h/2);}),transparent:true,opacity:0.9});
+const slideDecalMat=new THREE.MeshLambertMaterial({map:texture(256,256,(g,w,h)=>{g.clearRect(0,0,w,h);g.fillStyle='rgba(73,240,255,0.55)';g.fillRect(0,0,w,h);g.fillStyle='#07303a';g.font='bold 54px '+DISP;g.textAlign='center';g.textBaseline='middle';g.fillText(T('▼ 슬라이드 ▼'),w/2,h/2);}),transparent:true,opacity:0.9});
 function slideDecal(){ const d=new THREE.Mesh(box(6.8,0.04,2.6),slideDecalMat); d.position.set(0,0.03,-5); return d; }
 function makeGiantPaper(){ const g=new THREE.Group(); const sheet=new THREE.Mesh(box(6.6,3.4,0.1),giantPaperMat); sheet.position.set(0,BANNER_BOTTOM+1.7,0.3); sheet.rotation.x=-0.35; g.add(sheet); g.add(B(0.3,BANNER_BOTTOM+3.4,0.3,0x5a4634,-3.75,(BANNER_BOTTOM+3.4)/2,0)); g.add(B(0.3,BANNER_BOTTOM+3.4,0.3,0x5a4634,3.75,(BANNER_BOTTOM+3.4)/2,0)); g.add(B(7.8,0.3,0.3,0x5a4634,0,BANNER_BOTTOM+3.4,0)); g.add(slideDecal()); return g; }
 function makeProfBlock(){ const g=new THREE.Group(); const p=makeProfessor(); p.rotation.y=Math.PI; p.userData.armL.rotation.x=-2.6; p.userData.armR.rotation.x=-2.6; g.add(p); g.userData.prof=p; return g; }
@@ -405,7 +412,7 @@ const G={running:false,paused:false,over:false,s:0,speed:12,t:0,laneT:0,lane:0,y
   data:0,papers:0,floor:1,chase:0,chaseDist:10,stumbleSlow:0,inv:0,nextSpawn:60,sincePaper:0,graduated:false,best:0,deadT:0,reason:'',shake:0,rotX:0,rotZ:0,hintDir:0,intro:0,introT:0,tut:false,tutStep:0,hp:3,hurtInv:0,sincePotion:0};
 let ents=[], gaps=[];
 try{G.best=parseInt(localStorage.getItem('tog_best')||'0',10)||0;}catch(e){}
-document.getElementById('bestLine').textContent=G.best?('최고 기록 '+G.best+'층'):'';
+document.getElementById('bestLine').textContent=G.best?(T('최고 기록 ')+G.best+T('층')):'';
 
 function clearTrack(){ for(const c of corners){ for(const m of c.meshes) scene.remove(m);} corners=[]; for(const r of runs){ if(r.towers) for(const m of r.towers) scene.remove(m);} runs=[]; for(const [i,g] of segMap){scene.remove(g); segPool.push(g);} segMap.clear(); }
 function reset(tut){
@@ -464,19 +471,19 @@ function spawnChunk(){
 // ───────────── tutorial ─────────────
 const TUT_CORNER=210;
 const TUT=[
-  {s:40, text:'← 왼쪽으로 드래그해서 데이터를 주워', build:s=>dataRow(s,-1,6)},
-  {s:80, text:'오른쪽으로 드래그! 데이터는 떠 있는 곳으로 옮겨가며 줍는다', build:s=>{dataRow(s,1,4); dataRow(s+11,0,3);}},
-  {s:125, text:'책더미 → 탭하거나 위로 스와이프해서 점프', build:s=>{low(s,0); low(s,-1); low(s,1); dataArc(s,0);}},
-  {s:165, text:'현수막 → 아래로 스와이프해서 슬라이드', build:s=>banner(s)},
-  {s:TUT_CORNER, text:'모퉁이! 화살표 방향으로 빠르게 튕겨서 회전', build:s=>{}},
-  {s:265, text:'교수님이 달려온다! 옆으로 비켜', build:s=>profRun(s+20,0)},
-  {s:315, text:'리뷰어 2인조 → 빈 차선으로', build:s=>revRun(s+20,[-1,0])},
-  {s:365, text:'거대 망치 → 망치가 지나간 쪽으로 타이밍 맞춰 통과', build:s=>hammer(s)},
-  {s:405, text:'거대 논문 → 슬라이드로 밑을 지나가', build:s=>giantPaper(s)},
-  {s:445, text:'끊긴 길 → 점프', build:s=>gap(s,6)},
-  {s:490, text:'커피 → 체력 1칸 회복 (체력은 3칸)', build:s=>coffee(s,0)},
-  {s:530, text:'논문 게재! 잠깐 무적 · 교수님을 들이받으면 우주로 날아간다 · 논문 1편 = 100점', build:s=>{paper(s,0); dataRow(s+4,0,8); low(s+14,0); profBlock(s+22,[-1,0]);}},
-  {s:580, text:'끝! 이제 진짜 탑으로', build:s=>{}, end:true}
+  {s:40, text:T('← 왼쪽으로 드래그해서 데이터를 주워'), build:s=>dataRow(s,-1,6)},
+  {s:80, text:T('오른쪽으로 드래그! 데이터는 떠 있는 곳으로 옮겨가며 줍는다'), build:s=>{dataRow(s,1,4); dataRow(s+11,0,3);}},
+  {s:125, text:T('책더미 → 탭하거나 위로 스와이프해서 점프'), build:s=>{low(s,0); low(s,-1); low(s,1); dataArc(s,0);}},
+  {s:165, text:T('현수막 → 아래로 스와이프해서 슬라이드'), build:s=>banner(s)},
+  {s:TUT_CORNER, text:T('모퉁이! 화살표 방향으로 빠르게 튕겨서 회전'), build:s=>{}},
+  {s:265, text:T('교수님이 달려온다! 옆으로 비켜'), build:s=>profRun(s+20,0)},
+  {s:315, text:T('리뷰어 2인조 → 빈 차선으로'), build:s=>revRun(s+20,[-1,0])},
+  {s:365, text:T('거대 망치 → 망치가 지나간 쪽으로 타이밍 맞춰 통과'), build:s=>hammer(s)},
+  {s:405, text:T('거대 논문 → 슬라이드로 밑을 지나가'), build:s=>giantPaper(s)},
+  {s:445, text:T('끊긴 길 → 점프'), build:s=>gap(s,6)},
+  {s:490, text:T('커피 → 체력 1칸 회복 (체력은 3칸)'), build:s=>coffee(s,0)},
+  {s:530, text:T('논문 게재! 잠깐 무적 · 교수님을 들이받으면 우주로 날아간다 · 논문 1편 = 100점'), build:s=>{paper(s,0); dataRow(s+4,0,8); low(s+14,0); profBlock(s+22,[-1,0]);}},
+  {s:580, text:T('끝! 이제 진짜 탑으로'), build:s=>{}, end:true}
 ];
 function buildTutorial(){ for(const t of TUT){ t.shown=false; t.build(t.s); } G.tutStep=0; }
 function tutorialTick(){ const t=TUT[G.tutStep]; if(!t) return; if(G.s>t.s-34 && !t.shown){ t.shown=true; setPrompt(t.text); } if(G.s>t.s+4){ t.shown=false; setPrompt(''); G.tutStep++; if(t.end){ finishTutorial(); } } }
@@ -516,8 +523,8 @@ function toast(text,cls){toastEl.textContent=text; toastEl.className='toast '+(c
 function flash(){const f=$('flash'); f.classList.remove('on'); void f.offsetWidth; f.classList.add('on');}
 function setHint(dir){ if(G.hintDir===dir) return; G.hintDir=dir; if(!dir){ hintEl.classList.remove('on'); } else { hintEl.textContent=dir<0?'↰':'↱'; hintEl.classList.add('on'); } }
 const hudCache={}; function setT(id,v){ if(hudCache[id]!==v){ hudCache[id]=v; $(id).textContent=v; } }
-function updateHUD(){ setT('floorN',G.floor); setT('dataN',G.data); setT('paperN',G.papers); setT('speedN','속도 '+Math.round(G.speed*(G.inv>0?1.5:1)/1.5));
-  setT('subLine',G.graduated?('포닥 '+Math.max(1,Math.floor((G.floor-GRAD_FLOOR)/10)+1)+'년차 · 점수 '+score()):('졸업까지 '+(GRAD_FLOOR-G.floor)+'층 · 점수 '+score())); }
+function updateHUD(){ setT('floorN',G.floor); setT('dataN',G.data); setT('paperN',G.papers); setT('speedN',T('속도 ')+Math.round(G.speed*(G.inv>0?1.5:1)/1.5));
+  setT('subLine',G.graduated?(T('포닥 ')+Math.max(1,Math.floor((G.floor-GRAD_FLOOR)/10)+1)+T('년차 · 점수 ')+score()):(T('졸업까지 ')+(GRAD_FLOOR-G.floor)+T('층 · 점수 ')+score())); }
 function score(){ return G.data+G.papers*100; }
 
 // ───────────── audio ─────────────
@@ -568,20 +575,20 @@ function startBgm(){ const a=ac(); if(!a) return; bgmNext=a.currentTime+0.05; if
 function stumble(){
   if(G.inv>0) return false;
   G.stumbleSlow=1.0; flash(); sfx('hit'); G.shake=0.5;
-  if(G.tut){ toast('괜찮아 다시!','white'); return false; }
-  const loss=Math.min(G.data,15); G.data-=loss; toast(loss>0?('데이터 '+loss+'개 유실!'):STUMBLE_LINES[Math.floor(Math.random()*3)],'red'); return false;
+  if(G.tut){ toast(T('괜찮아 다시!'),'white'); return false; }
+  const loss=Math.min(G.data,15); G.data-=loss; toast(loss>0?(T('데이터 ')+loss+T('개 유실!')):STUMBLE_LINES[Math.floor(Math.random()*3)],'red'); return false;
 }
-function hurt(reason){ if(G.over||G.inv>0||G.hurtInv>0) return false; if(G.tut){ flash(); sfx('hit'); toast('괜찮아 다시!','white'); G.shake=0.5; G.hurtInv=1.2; return false; }
+function hurt(reason){ if(G.over||G.inv>0||G.hurtInv>0) return false; if(G.tut){ flash(); sfx('hit'); toast(T('괜찮아 다시!'),'white'); G.shake=0.5; G.hurtInv=1.2; return false; }
   G.hp--; G.hurtInv=1.6; flash(); G.shake=0.6; G.stumbleSlow=0.8; sfx('crash'); updateHearts();
-  if(G.hp<=0){ die(reason); return true; } toast(reason+' · 체력 -1','red'); return false; }
+  if(G.hp<=0){ die(reason); return true; } toast(T(reason)+T(' · 체력 -1'),'red'); return false; }
 function updateHearts(){ const el=$('hearts').children; for(let i=0;i<3;i++) el[i].classList.toggle('off',i>=G.hp); }
-function drinkCoffee(){ sfx('paper'); if(G.hp<3){ G.hp++; updateHearts(); toast('커피 수혈! 체력 +1','green'); } else { G.data+=10; toast('커피 과다 · 데이터 +10','cyan'); } }
-function die(reason){ if(G.over) return; if(G.tut){ flash(); sfx('hit'); toast('괜찮아 다시!','white'); G.shake=0.5; G.inv=0.9; if(/떨어/.test(reason)){ G.falling=false; G.jumping=false; G.y=0; G.vy=0; for(const g of gaps){ if(G.s>g.s-1 && G.s<g.s+g.len+1) G.s=g.s+g.len+1; } } return; } for(const h of horde) h.visible=true; G.chaseDist=15; G.over=true; G.reason=reason; G.deadT=0; sfx(/떨어/.test(reason)?'fall':/벽|망치|깔/.test(reason)?'crash':'prof'); hideBubble(); setHint(0); flash(); }
+function drinkCoffee(){ sfx('paper'); if(G.hp<3){ G.hp++; updateHearts(); toast(T('커피 수혈! 체력 +1'),'green'); } else { G.data+=10; toast(T('커피 과다 · 데이터 +10'),'cyan'); } }
+function die(reason){ if(G.over) return; if(G.tut){ flash(); sfx('hit'); toast(T('괜찮아 다시!'),'white'); G.shake=0.5; G.inv=0.9; if(/떨어/.test(reason)){ G.falling=false; G.jumping=false; G.y=0; G.vy=0; for(const g of gaps){ if(G.s>g.s-1 && G.s<g.s+g.len+1) G.s=g.s+g.len+1; } } return; } for(const h of horde) h.visible=true; G.chaseDist=15; G.over=true; G.reason=reason; G.deadT=0; sfx(/떨어/.test(reason)?'fall':/벽|망치|깔/.test(reason)?'crash':'prof'); hideBubble(); setHint(0); flash(); }
 function finishGameOver(){
   G.running=false; $('hud').hidden=true; $('pauseBtn').style.display='none';
-  $('reason').textContent=G.reason; $('oFloor').textContent=G.floor; $('oData').textContent=G.data; $('oPaper').textContent=G.papers; $('oScore').textContent=score();
+  $('reason').textContent=T(G.reason); $('oFloor').textContent=G.floor; $('oData').textContent=G.data; $('oPaper').textContent=G.papers; $('oScore').textContent=score();
   let nb=false; if(G.floor>G.best){G.best=G.floor; nb=true; try{localStorage.setItem('tog_best',String(G.best));}catch(e){}}
-  $('oBest').textContent=nb?'신기록! 최고 '+G.best+'층':'최고 기록 '+G.best+'층'; $('bestLine').textContent='최고 기록 '+G.best+'층';
+  $('oBest').textContent=nb?T('신기록! 최고 ')+G.best+T('층'):T('최고 기록 ')+G.best+T('층'); $('bestLine').textContent=T('최고 기록 ')+G.best+T('층');
   $('rankEntry').hidden=false; try{ $('rankName').value=localStorage.getItem('tog_name')||''; }catch(e){} renderRank($('oRank'),null);
   $('over').hidden=false;
 }
@@ -593,29 +600,29 @@ function loadRank(){ try{ return JSON.parse(localStorage.getItem('tog_rank')||'[
 function saveRank(list){ try{ localStorage.setItem('tog_rank',JSON.stringify(list.slice(0,20))); }catch(e){} }
 function fetchRank(){ if(!SUPA.url) return Promise.resolve(loadRank()); return supa(SUPA.table+'?select=id,name,score,floor,data,papers,created_at&order=score.desc,floor.desc&limit=20').catch(()=>loadRank()); }
 function escapeHtml(t){ return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-function paintRank(el,list,me){ el.innerHTML=''; if(!list.length){ const d=document.createElement('li'); d.className='empty'; d.textContent='아직 기록이 없다'; el.appendChild(d); return; }
-  list.forEach((r,i)=>{ const li=document.createElement('li'); if(me&&String(r.id)===String(me)) li.className='me'; li.innerHTML='<span>'+(i+1)+'</span><span>'+escapeHtml(r.name)+'<small>'+r.floor+'층 · 데이터 '+r.data+' · 논문 '+r.papers+'</small></span><b>'+r.score+'</b>'; el.appendChild(li); }); }
-function renderRank(el,me){ const loading=document.createElement('li'); loading.className='empty'; loading.textContent='랭킹 불러오는 중…'; el.innerHTML=''; el.appendChild(loading); fetchRank().then(list=>paintRank(el,list,me)); }
+function paintRank(el,list,me){ el.innerHTML=''; if(!list.length){ const d=document.createElement('li'); d.className='empty'; d.textContent=T('아직 기록이 없다'); el.appendChild(d); return; }
+  list.forEach((r,i)=>{ const li=document.createElement('li'); if(me&&String(r.id)===String(me)) li.className='me'; li.innerHTML='<span>'+(i+1)+'</span><span>'+escapeHtml(r.name)+'<small>'+r.floor+T('층 · 데이터 ')+r.data+T(' · 논문 ')+r.papers+'</small></span><b>'+r.score+'</b>'; el.appendChild(li); }); }
+function renderRank(el,me){ const loading=document.createElement('li'); loading.className='empty'; loading.textContent=T('랭킹 불러오는 중…'); el.innerHTML=''; el.appendChild(loading); fetchRank().then(list=>paintRank(el,list,me)); }
 let rankBusy=false;
-function submitRank(){ if(rankBusy) return; const name=($('rankName').value||'익명').trim().slice(0,10)||'익명'; try{ localStorage.setItem('tog_name',name); }catch(e){}
+function submitRank(){ if(rankBusy) return; const name=($('rankName').value||T('익명')).trim().slice(0,10)||T('익명'); try{ localStorage.setItem('tog_name',name); }catch(e){}
   const rec={id:Date.now()+''+Math.random().toString(36).slice(2,6),name,score:score(),floor:G.floor,data:G.data,papers:G.papers,at:new Date().toISOString()};
   const list=loadRank(); list.push(rec); list.sort((a,b)=>b.score-a.score||b.floor-a.floor); saveRank(list);
-  rankBusy=true; $('rankSubmit').textContent='등록 중…';
-  const done=(id)=>{ rankBusy=false; $('rankSubmit').textContent='등록'; $('rankEntry').hidden=true; renderRank($('oRank'),id); };
+  rankBusy=true; $('rankSubmit').textContent=T('등록 중…');
+  const done=(id)=>{ rankBusy=false; $('rankSubmit').textContent=T('등록'); $('rankEntry').hidden=true; renderRank($('oRank'),id); };
   if(!SUPA.url){ done(rec.id); return; }
   supa(SUPA.table,{method:'POST',prefer:'return=representation',body:{name:rec.name,score:rec.score,floor:rec.floor,data:rec.data,papers:rec.papers}})
     .then(rows=>done(rows&&rows[0]?rows[0].id:rec.id))
-    .catch(()=>{ rankBusy=false; $('rankSubmit').textContent='등록'; toast('랭킹 서버 연결 실패','red'); $('rankEntry').hidden=true; paintRank($('oRank'),loadRank(),rec.id); });
+    .catch(()=>{ rankBusy=false; $('rankSubmit').textContent=T('등록'); toast(T('랭킹 서버 연결 실패'),'red'); $('rankEntry').hidden=true; paintRank($('oRank'),loadRank(),rec.id); });
 }
-function collectPaper(){ G.papers++; G.inv=6.5; sfx('paper'); toast('논문 게재! +100','green'); checkGrad(); }
+function collectPaper(){ G.papers++; G.inv=6.5; sfx('paper'); toast(T('논문 게재! +100'),'green'); checkGrad(); }
 // invincible hits: the thing you ran into gets punted far down the road
-const LAUNCH_LINES=['날아갔다!','홈런!','리젝 반사!','굿바이!'];
+const LAUNCH_LINES=[T('날아갔다!'),T('홈런!'),T('리젝 반사!'),T('굿바이!')];
 function launch(e,label){ if(e.flying) return; e.flying=true; e.flyT=0; const run=runAt(e.s); const ex=(e.type==='prof'||e.type==='profRun'); e.extreme=ex;
   // professors: Team-Rocket launch — 4× the speed · sky-high arc · 4.5 s of screaming · twinkle at the end
   const fwd=ex?70+Math.random()*20:16+Math.random()*10, up=ex?42+Math.random()*8:11+Math.random()*6, side=ex?(Math.random()-.5)*20:(Math.random()-.5)*14;
   const v=new THREE.Vector3(run.dx,0,run.dz).multiplyScalar(fwd); v.y=up; v.x+=run.rx*side; v.z+=run.rz*side; e.vel=v; e.spin=new THREE.Vector3((Math.random()-.5)*(ex?16:9),(Math.random()-.5)*6,(Math.random()-.5)*(ex?16:9));
-  sfx(ex?'yeet':'punt'); G.shake=Math.max(G.shake,ex?0.5:0.25); toast(ex?'교수님 발사!!':(label||'')+' '+LAUNCH_LINES[Math.floor(Math.random()*LAUNCH_LINES.length)],'cyan'); G.data+=ex?20:5; if(ex) showBubble('으아아아아아악!!!',e.mesh,2.4); }
-function updateFly(e,dt){ e.flyT+=dt; const ex=e.extreme; e.vel.y-=(ex?9:22)*dt; e.mesh.position.addScaledVector(e.vel,dt); e.mesh.rotation.x+=e.spin.x*dt; e.mesh.rotation.y+=e.spin.y*dt; e.mesh.rotation.z+=e.spin.z*dt; const life=ex?4.5:1.6; const k=Math.max(0.03,1-e.flyT/life); e.mesh.scale.set(k,k,k); if(ex && !e.twinkled && e.flyT>life-0.4){ e.twinkled=true; toast('✦ 띠링','white'); sfx('twinkle'); } if(e.flyT>life) e.alive=false; }
+  sfx(ex?'yeet':'punt'); G.shake=Math.max(G.shake,ex?0.5:0.25); toast(ex?T('교수님 발사!!'):(label||'')+' '+LAUNCH_LINES[Math.floor(Math.random()*LAUNCH_LINES.length)],'cyan'); G.data+=ex?20:5; if(ex) showBubble(T('으아아아아아악!!!'),e.mesh,2.4); }
+function updateFly(e,dt){ e.flyT+=dt; const ex=e.extreme; e.vel.y-=(ex?9:22)*dt; e.mesh.position.addScaledVector(e.vel,dt); e.mesh.rotation.x+=e.spin.x*dt; e.mesh.rotation.y+=e.spin.y*dt; e.mesh.rotation.z+=e.spin.z*dt; const life=ex?4.5:1.6; const k=Math.max(0.03,1-e.flyT/life); e.mesh.scale.set(k,k,k); if(ex && !e.twinkled && e.flyT>life-0.4){ e.twinkled=true; toast(T('✦ 띠링'),'white'); sfx('twinkle'); } if(e.flyT>life) e.alive=false; }
 function checkGrad(){ if(!G.graduated && G.floor>=GRAD_FLOOR){ G.graduated=true; G.paused=true; sfx('grad'); $('gFloor').textContent=G.floor; $('gData').textContent=G.data; $('gTime').textContent=Math.round(G.t); $('grad').hidden=false; } }
 
 // ───────────── main loop ─────────────
@@ -651,7 +658,7 @@ function loop(now){
   // corners
   extendTrack(G.s+320);
   const uc=upcomingCorner(); setHint(uc&&!uc.turned?uc.dir:0);
-  for(const c of corners){ if(!c.turned && !c.dead && G.s>c.s+2.2){ c.dead=true; c.turned=true; if(G.tut){ toast('화살표 쪽으로 튕겨야 해!','white'); } else { hurt('벽에 부딪힘'); } } }
+  for(const c of corners){ if(!c.turned && !c.dead && G.s>c.s+2.2){ c.dead=true; c.turned=true; if(G.tut){ toast(T('화살표 쪽으로 튕겨야 해!'),'white'); } else { hurt('벽에 부딪힘'); } } }
   for(let i=corners.length-1;i>=0;i--){ if(corners[i].s<G.s-60){ for(const m of corners[i].meshes) scene.remove(m); corners.splice(i,1);} }
   while(runs.length>2 && runs[1].s1<G.s-60){ const r=runs.shift(); if(r.towers) for(const m of r.towers) scene.remove(m); }
 
@@ -665,7 +672,7 @@ function loop(now){
   if(G.sliding){ G.slideT-=dt; if(G.slideT<=0) G.sliding=false; }
 
   // floors
-  const fl=Math.floor((K*G.s)/FLOOR_H)+1; if(fl!==G.floor){ G.floor=fl; if(fl%10===0) toast(fl+'층',''); checkGrad(); }
+  const fl=Math.floor((K*G.s)/FLOOR_H)+1; if(fl!==G.floor){ G.floor=fl; if(fl%10===0) toast(fl+T('층'),''); checkGrad(); }
 
   // spawn & cull
   if(!G.tut) while(G.nextSpawn<G.s+170) spawnChunk();
@@ -688,27 +695,27 @@ function loop(now){
     } else if(e.type==='prof'){
       if(!e.said && ds<30 && ds>0){ e.said=true; if(!bubbleTarget||bubbleT<0.3) showBubble(e.line,e.mesh,1.4); }
       const p=e.mesh.userData.prof; p.userData.armL.rotation.x=-2.6+Math.sin(G.t*10)*0.3; p.userData.armR.rotation.x=-2.6-Math.sin(G.t*10)*0.3;
-      if(near(e,0.9) && Math.abs(G.lane-e.lane)<0.6){ if(G.inv>0){ launch(e,'교수님'); } else { e.alive=false; e.mesh.visible=false; if(hurt('교수님께 잡혔다')) break; } }
+      if(near(e,0.9) && Math.abs(G.lane-e.lane)<0.6){ if(G.inv>0){ launch(e,T('교수님')); } else { e.alive=false; e.mesh.visible=false; if(hurt('교수님께 잡혔다')) break; } }
     } else if(e.type==='low'){
-      if(near(e,0.75) && Math.abs(G.lane-e.lane)<0.6 && G.y<LOW_H-0.15){ if(G.inv>0){ launch(e,'장애물'); } else { e.alive=false; e.mesh.visible=false; if(stumble()) break; } }
+      if(near(e,0.75) && Math.abs(G.lane-e.lane)<0.6 && G.y<LOW_H-0.15){ if(G.inv>0){ launch(e,T('장애물')); } else { e.alive=false; e.mesh.visible=false; if(stumble()) break; } }
     } else if(e.type==='high'){
       const top=G.y+(G.sliding?1.2:PLAYER_H);
-      if(near(e,0.6) && top>BANNER_BOTTOM){ if(G.inv>0){ launch(e,e.giant?'거대 논문':'현수막'); } else { e.alive=false; e.mesh.visible=false; if(e.giant){ if(hurt('거대 논문에 깔림')) break; } else if(stumble()) break; } }
+      if(near(e,0.6) && top>BANNER_BOTTOM){ if(G.inv>0){ launch(e,e.giant?T('거대 논문'):T('현수막')); } else { e.alive=false; e.mesh.visible=false; if(e.giant){ if(hurt('거대 논문에 깔림')) break; } else if(stumble()) break; } }
     } else if(e.type==='hammer'){
       const ang=Math.sin(G.t*e.omega+e.phase)*1.05; e.mesh.userData.pivot.rotation.z=ang; e.headLane=-Math.sin(ang)*3.9/LANE_W;
-      if(near(e,1.0) && Math.abs(G.lane-e.headLane)<0.75 && G.y<2.0){ if(G.inv>0){ launch(e,'거대 망치'); } else { e.alive=false; e.mesh.visible=false; if(hurt('거대 망치에 맞음')) break; } }
+      if(near(e,1.0) && Math.abs(G.lane-e.headLane)<0.75 && G.y<2.0){ if(G.inv>0){ launch(e,T('거대 망치')); } else { e.alive=false; e.mesh.visible=false; if(hurt('거대 망치에 맞음')) break; } }
     } else if(e.type==='roll'){
       if(ds<90){ e.s-=12*dt; place(e.mesh,e.s,e.lane,e.yOff); e.mesh.userData.cyl.rotation.x-=dt*9; }
-      if(near(e,1.4) && Math.abs(G.lane-e.lane)<0.7 && G.y<2.1){ if(G.inv>0){ launch(e,'리젝 두루마리'); } else { e.alive=false; e.mesh.visible=false; if(hurt('리젝 두루마리에 깔림')) break; } }
+      if(near(e,1.4) && Math.abs(G.lane-e.lane)<0.7 && G.y<2.1){ if(G.inv>0){ launch(e,T('리젝 두루마리')); } else { e.alive=false; e.mesh.visible=false; if(hurt('리젝 두루마리에 깔림')) break; } }
     } else if(e.type==='profRun'||e.type==='revRun'){
       const isP=e.type==='profRun'; const m=isP?e.mesh.userData.prof:e.mesh.userData.rev;
       if(ds<110 && ds>-3){ e.s-=9*dt; place(e.mesh,e.s,e.lane,0); const r=G.t*22; m.userData.legL.rotation.x=Math.sin(r)*1.0; m.userData.legR.rotation.x=-Math.sin(r)*1.0; m.userData.armL.rotation.x=-2.4+Math.sin(r)*0.4; m.userData.armR.rotation.x=-2.4-Math.sin(r)*0.4; }
       if(!e.said && ds<40 && ds>0){ e.said=true; if(!bubbleTarget||bubbleT<0.3) showBubble(e.line,e.mesh,1.4); }
-      if(near(e,1.0) && Math.abs(G.lane-e.lane)<0.6 && G.y<2.0){ if(G.inv>0){ launch(e,isP?'교수님':'리뷰어'); } else { e.alive=false; e.mesh.visible=false; if(hurt(isP?'교수님께 잡혔다':'리뷰어에게 잡혔다')) break; } }
+      if(near(e,1.0) && Math.abs(G.lane-e.lane)<0.6 && G.y<2.0){ if(G.inv>0){ launch(e,isP?T('교수님'):T('리뷰어')); } else { e.alive=false; e.mesh.visible=false; if(hurt(isP?'교수님께 잡혔다':'리뷰어에게 잡혔다')) break; } }
     } else if(e.type==='topple'){
       if(!e.started && ds<28){ e.started=true; sfx('creak'); }
       if(e.started && e.f<1){ e.f=Math.min(1,e.f+dt/0.55); e.mesh.userData.pivot.rotation.z=-e.side*e.f*e.f*Math.PI/2; if(e.f>=1){ G.shake=Math.max(G.shake,0.3); sfx('crash'); } }
-      if(e.f>0.5 && near(e,0.9) && G.y<LOW_H-0.15){ const covered = e.kind===1 ? true : (e.side<0 ? G.lane<0.6 : G.lane>-0.6); if(covered){ if(G.inv>0){ launch(e,e.kind===1?'기둥':'책장'); } else { e.alive=false; e.mesh.visible=false; if(stumble()) break; } } }
+      if(e.f>0.5 && near(e,0.9) && G.y<LOW_H-0.15){ const covered = e.kind===1 ? true : (e.side<0 ? G.lane<0.6 : G.lane>-0.6); if(covered){ if(G.inv>0){ launch(e,e.kind===1?T('기둥'):T('책장')); } else { e.alive=false; e.mesh.visible=false; if(stumble()) break; } } }
     }
   }
 
@@ -746,9 +753,9 @@ $('startBtn').onclick=()=>startGame(false); $('retryBtn').onclick=()=>startGame(
 $('homeBtn').onclick=()=>{ $('over').hidden=true; $('title').hidden=false; $('credit').hidden=false; };
 function togglePause(){ if(!G.running||G.over||(G.graduated&&!$('grad').hidden)) return; G.paused=!G.paused; $('pause').hidden=!G.paused; if(!G.paused){ last=performance.now(); if(AC) bgmNext=AC.currentTime+0.05; } }
 $('pauseBtn').onclick=togglePause; $('resumeBtn').onclick=togglePause;
-$('soundBtn').onclick=()=>{ soundOn=!soundOn; $('soundBtn').textContent=soundOn?'소리 켜짐':'소리 꺼짐'; if(soundOn&&AC) bgmNext=AC.currentTime+0.05; };
+$('soundBtn').onclick=()=>{ soundOn=!soundOn; $('soundBtn').textContent=soundOn?T('소리 켜짐'):T('소리 꺼짐'); if(soundOn&&AC) bgmNext=AC.currentTime+0.05; };
 $('quitBtn').onclick=()=>{ G.paused=false; G.running=false; G.tut=false; setPrompt(''); $('pause').hidden=true; $('hud').hidden=true; $('pauseBtn').style.display='none'; $('title').hidden=false; $('credit').hidden=false; };
-$('postdocBtn').onclick=()=>{ $('grad').hidden=true; G.paused=false; last=performance.now(); if(AC) bgmNext=AC.currentTime+0.05; toast('포닥 모드','green'); };
+$('postdocBtn').onclick=()=>{ $('grad').hidden=true; G.paused=false; last=performance.now(); if(AC) bgmNext=AC.currentTime+0.05; toast(T('포닥 모드'),'green'); };
 
 // title scene
 addRun(0,0,0,0,1,0); extendTrack(320); updateSegments(0); placePlayer(); updateScenery(0,0,0);
