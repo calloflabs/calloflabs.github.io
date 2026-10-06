@@ -15,7 +15,7 @@
 | 졸업의 탑 | https://calloflabs.github.io/tower-of-graduation/ | 이 저장소 `tower-of-graduation/` |
 | 초록 제출하러 가는 길 | https://calloflabs.github.io/road-to-submission/ | 이 저장소 `road-to-submission/` |
 
-졸업의 탑과 초록 제출하러 가는 길은 아직 별도 저장소 없이 여기서 바로 서빙됩니다. 랭킹 테이블 SQL은 `supabase/`에 있습니다.
+졸업의 탑과 초록 제출하러 가는 길은 별도 저장소 없이 이 저장소의 하위 폴더에서 서빙됩니다. Vercel 프로젝트(tower-of-graduation · road-to-submission)도 같은 저장소를 Root Directory만 다르게 잡아 배포합니다. 랭킹 테이블 SQL은 `supabase/`에 있습니다.
 
 영어는 `?lang=en` 으로 전환됩니다. 영어판이 있는 게임은 카드도 선택한 언어로 링크됩니다.
 
