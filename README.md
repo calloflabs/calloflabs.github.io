@@ -12,8 +12,8 @@
 | 어쩔수가없다 | https://no-other-choice.vercel.app | [no-other-choice](https://github.com/calloflabs/no-other-choice) |
 | 학회 가는 길 | https://road-to-the-conference.vercel.app | [road-to-the-conference](https://github.com/calloflabs/road-to-the-conference) |
 | HBM 수박게임 | https://stack-hbm.vercel.app | [stack-hbm](https://github.com/calloflabs/stack-hbm) |
-| 졸업의 탑 | https://calloflabs.github.io/tower-of-graduation/ | 이 저장소 `tower-of-graduation/` |
-| 초록 제출하러 가는 길 | https://calloflabs.github.io/road-to-submission/ | 이 저장소 `road-to-submission/` |
+| 졸업의 탑 | https://tower-of-graduation.vercel.app | 이 저장소 `tower-of-graduation/` |
+| 초록 제출하러 가는 길 | https://road-to-submission.vercel.app | 이 저장소 `road-to-submission/` |
 
 졸업의 탑과 초록 제출하러 가는 길은 별도 저장소 없이 이 저장소의 하위 폴더에서 서빙됩니다. Vercel 프로젝트(tower-of-graduation · road-to-submission)도 같은 저장소를 Root Directory만 다르게 잡아 배포합니다. 랭킹 테이블 SQL은 `supabase/`에 있습니다.
 
