@@ -171,7 +171,7 @@ const GAMES = [
   },
   {
     id:'road-to-the-conference',
-    url:'https://road-to-conference.vercel.app/',
+    url:'https://road-to-the-conference.vercel.app/',
     repo:'https://github.com/calloflabs/road-to-the-conference',
     img:'img/road-to-the-conference.webp',
     ko:{ title:'학회 가는 길', desc:'세션 20분 전. 교수님을 조수석에 태우고 거위 떼와 학과장님을 피해 학회장까지. 브레이크는 없습니다.' },
@@ -186,12 +186,32 @@ const GAMES = [
     ko:{ title:'HBM 수박게임', desc:'수박 대신 웨이퍼. 중력 대신 스핀코터. 실리콘에서 12단 HBM까지 합치면 하이닉스에 갈 수 있을지도.' },
     en:{ title:'Stack HBM', desc:'Suika with wafers. A spin coater instead of gravity. Merge from silicon to a 12-high HBM stack.' },
     tags:['2D','rank']
+  },
+  {
+    id:'tower-of-graduation',
+    url:'tower-of-graduation/',
+    repo:'https://github.com/calloflabs/calloflabs.github.io/tree/main/tower-of-graduation',
+    img:'img/tower-of-graduation.webp',
+    koOnly:true,
+    ko:{ title:'졸업의 탑', desc:'탑 꼭대기에 졸업장이 있다. 리뷰어 떼와 교수님보다 빨리 올라가라. 좌우 드래그로 데이터를 줍고 점프·슬라이드로 피하는 러너.' },
+    en:{ title:'Tower of Graduation', desc:'The diploma is at the top. Outrun the reviewers and your professor. Drag to collect data. Jump and slide past everything else.' },
+    tags:['3D','rank']
+  },
+  {
+    id:'road-to-submission',
+    url:'road-to-submission/',
+    repo:'https://github.com/calloflabs/calloflabs.github.io/tree/main/road-to-submission',
+    img:'img/road-to-submission.webp',
+    koOnly:true,
+    ko:{ title:'초록 제출하러 가는 길', desc:'마감 90초 전. 차도 50개 너머의 제출 창구까지 초록 한 장 들고 뛰어라. 못 내면 죽는다. 비유가 아니다.' },
+    en:{ title:'Road to Submission', desc:'Ninety seconds to the deadline. Fifty lanes of traffic between you and the submission desk. Miss it and you die. Not a metaphor.' },
+    tags:['3D','rank']
   }
 ];
 
 const I18N = {
-  ko:{ tagline:'대학원생을 위한 미니게임 아케이드', lede:'장비를 두들기고 리뷰어를 쓰러뜨리고 교수님을 학회장까지 모시는 게임들. 폰에서 바로 됩니다. 설치 없음.', play:'플레이', rank:'랭킹', src:'소스', note:'모든 게임은 브라우저에서 돌아가는 단일 HTML 파일입니다. 랭킹은 게임 안에서 등록합니다.' },
-  en:{ tagline:'A mini-game arcade for grad students', lede:'Smash equipment. Fight reviewers. Drive your professor to the conference. Plays in the browser on your phone. Nothing to install.', play:'Play', rank:'Ranked', src:'Source', note:'Every game is a single HTML file that runs in the browser. Rankings are submitted inside each game.' }
+  ko:{ koOnly:'한국어', tagline:'대학원생을 위한 미니게임 아케이드', lede:'장비를 두들기고 리뷰어를 쓰러뜨리고 교수님을 학회장까지 모시는 게임들. 폰에서 바로 됩니다. 설치 없음.', play:'플레이', rank:'랭킹', src:'소스', note:'모든 게임은 브라우저에서 돌아가는 단일 HTML 파일입니다. 랭킹은 게임 안에서 등록합니다.' },
+  en:{ koOnly:'Korean only', tagline:'A mini-game arcade for grad students', lede:'Smash equipment. Fight reviewers. Drive your professor to the conference. Plays in the browser on your phone. Nothing to install.', play:'Play', rank:'Ranked', src:'Source', note:'Every game is a single HTML file that runs in the browser. Rankings are submitted inside each game.' }
 };
 
 let lang = (()=>{
@@ -201,7 +221,7 @@ let lang = (()=>{
   return /^en/i.test(navigator.language||'') ? 'en' : 'ko';
 })();
 
-function playUrl(g){ return lang==='en' ? g.url + '?lang=en' : g.url; }
+function playUrl(g){ return (lang==='en' && !g.koOnly) ? g.url + '?lang=en' : g.url; }
 
 function render(){
   const t = I18N[lang];
@@ -213,7 +233,7 @@ function render(){
     const s = g[lang];
     const chips = g.tags.map(tag => tag==='rank'
       ? `<span class="chip rank">${t.rank}</span>`
-      : `<span class="chip">${tag}</span>`).join('');
+      : `<span class="chip">${tag}</span>`).join('') + ((g.koOnly && lang==='en') ? `<span class="chip">${t.koOnly}</span>` : '');
     return `<li class="card">
       <a class="hit" href="${playUrl(g)}" aria-label="${s.title}"></a>
       <a class="src" href="${g.repo}" target="_blank" rel="noopener">${t.src}</a>

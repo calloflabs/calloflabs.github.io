@@ -10,10 +10,14 @@
 | --- | --- | --- |
 | 연구실에서 살아남기 | https://lab-survival.vercel.app | [lab-survival](https://github.com/calloflabs/lab-survival) |
 | 어쩔수가없다 | https://no-other-choice.vercel.app | [no-other-choice](https://github.com/calloflabs/no-other-choice) |
-| 학회 가는 길 | https://road-to-conference.vercel.app | [road-to-the-conference](https://github.com/calloflabs/road-to-the-conference) |
+| 학회 가는 길 | https://road-to-the-conference.vercel.app | [road-to-the-conference](https://github.com/calloflabs/road-to-the-conference) |
 | HBM 수박게임 | https://stack-hbm.vercel.app | [stack-hbm](https://github.com/calloflabs/stack-hbm) |
+| 졸업의 탑 | https://calloflabs.github.io/tower-of-graduation/ | 이 저장소 `tower-of-graduation/` |
+| 초록 제출하러 가는 길 | https://calloflabs.github.io/road-to-submission/ | 이 저장소 `road-to-submission/` |
 
-영어는 `?lang=en` 으로 전환됩니다. 게임 카드도 선택한 언어로 링크됩니다.
+졸업의 탑과 초록 제출하러 가는 길은 아직 별도 저장소 없이 여기서 바로 서빙됩니다. 랭킹 테이블 SQL은 `supabase/`에 있습니다.
+
+영어는 `?lang=en` 으로 전환됩니다. 영어판이 있는 게임은 카드도 선택한 언어로 링크됩니다.
 
 ## 게임 추가하는 법
 
@@ -25,3 +29,5 @@
 
 - `index.html` — 단일 파일. 외부 의존성은 폰트 두 종(Galmuri · Pretendard · jsDelivr)뿐
 - `img/` — 게임 썸네일
+- `tower-of-graduation/` `road-to-submission/` — 여기서 직접 서빙하는 게임(각각 index.html 하나)
+- `supabase/` — 랭킹 테이블 생성 SQL
