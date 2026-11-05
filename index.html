@@ -261,6 +261,7 @@ document.getElementById('grid').addEventListener('click', e=>{
   function track(ev,target){try{fetch(U+'/rest/v1/page_visits',{method:'POST',keepalive:true,headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({page:PAGE,event:ev,vid:vid,lang:document.documentElement.lang||'',device:device,ref:ref,target:target||null})}).catch(function(){});}catch(e){}}
   window.colTrack=track;
   track('visit');
+  addEventListener('pageshow',function(e){if(e.persisted)track('visit');});  // count back-navigation restores from bfcache
 })();
 </script>
 </body>
