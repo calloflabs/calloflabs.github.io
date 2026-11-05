@@ -244,6 +244,24 @@ document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',
   render();
 }));
 render();
+document.getElementById('grid').addEventListener('click', e=>{
+  const a = e.target.closest('a.hit'); if(!a) return;
+  const card = a.closest('.card'); const idx = [...card.parentNode.children].indexOf(card);
+  if(window.colTrack && GAMES[idx]) colTrack('click', GAMES[idx].id);
+});
+</script>
+<script>
+/* Visit tracker: one row per page view ('visit') and per game start ('start') in public.page_visits. */
+(function(){
+  var U='https://lyqmcergsilvrohgzdpn.supabase.co',K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5cW1jZXJnc2lsdnJvaGd6ZHBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAyNTcyNDEsImV4cCI6MjEwNTgzMzI0MX0.stTL692D9iAzQGDRESMZvFfoBOnOIfqfiFdvbC_SWwg',PAGE='hub';
+  if(navigator.webdriver) return;  // skip headless/automated browsers
+  var vid='';try{vid=localStorage.getItem('col_vid')||'';if(!vid){vid=Math.random().toString(36).slice(2,10)+Date.now().toString(36);localStorage.setItem('col_vid',vid);}}catch(e){}
+  var ref='';try{ref=document.referrer?new URL(document.referrer).hostname:'';}catch(e){}
+  var device=/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)?'mobile':'desktop';
+  function track(ev,target){try{fetch(U+'/rest/v1/page_visits',{method:'POST',keepalive:true,headers:{apikey:K,Authorization:'Bearer '+K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({page:PAGE,event:ev,vid:vid,lang:document.documentElement.lang||'',device:device,ref:ref,target:target||null})}).catch(function(){});}catch(e){}}
+  window.colTrack=track;
+  track('visit');
+})();
 </script>
 </body>
 </html>
