@@ -14,6 +14,8 @@
 | HBM 수박게임 | https://stack-hbm.vercel.app |
 | 졸업의 탑 | https://tower-of-graduation.vercel.app |
 | 초록 제출하러 가는 길 | https://road-to-submission.vercel.app |
+| 교수님을 구해줘 | https://save-the-professor.vercel.app |
+| 스키장 랩미팅 | https://ski-lab-meeting.vercel.app |
 
 영어는 `?lang=en` 으로 전환됩니다. 카드도 선택한 언어로 링크됩니다.
 
